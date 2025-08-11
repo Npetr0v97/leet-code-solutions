@@ -3,7 +3,6 @@
 # Add the two numbers and return the sum as a linked list.
 
 # You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-import math
 
 
 class Solution:
@@ -15,7 +14,7 @@ class Solution:
         math_pow = 0
         while current_node_l1:
             new_num = current_node_l1.val
-            for power in range(math_pow):
+            for _ in range(math_pow):
                 new_num = new_num * 10
 
             l1_sum += new_num
@@ -26,7 +25,7 @@ class Solution:
         math_pow = 0
         while current_node_l2:
             new_num = current_node_l2.val
-            for power in range(math_pow):
+            for _ in range(math_pow):
                 new_num = new_num * 10
 
             l2_sum += new_num
@@ -58,6 +57,8 @@ class Solution:
 
 # Solution.addTwoNumbers()
 class ListNode:
+    """The class that is the construcntion piece of the linked list"""
+
     def __init__(self, val=0, next=None):
 
         self.val = val
